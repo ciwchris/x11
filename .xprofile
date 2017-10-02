@@ -40,15 +40,20 @@ xcape -e "Control_L=Escape"
 [[ -f $HOME/.Xfont ]] && xrdb -merge $HOME/.Xfont
 [[ -f $HOME/.bin/color-mode/set-color-mode.sh ]] && source $HOME/.bin/color-mode/set-color-mode.sh
 
-# start xcompmgr so terminals have true transparency
-xcompmgr -c &
-# and now put the background image back
-# a fix for this should be coming in SLiM
-hsetroot -fill $HOME/.config/wallpapers/In_the_Grass.jpg
-
-# start rofi in daemon mode
-rofi &
 
 # Adjust display for screen resolution
 xrandr --dpi 200
-if [ "$GDMSESSION" == "i3" ]; then export GDK_SCALE=2; fi
+if [ "$GDMSESSION" == "i3" ]; then
+    # start xcompmgr so terminals have true transparency
+    xcompmgr -c &
+    # and now put the background image back
+    # a fix for this should be coming in SLiM
+    hsetroot -fill $HOME/.config/wallpapers/In_the_Grass.jpg
+
+    # start rofi in daemon mode
+    rofi &
+
+    export GDK_SCALE=2
+else
+    unset GDK_SCALE=
+fi
