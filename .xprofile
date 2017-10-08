@@ -46,14 +46,13 @@ xrandr --dpi 200
 if [ "$GDMSESSION" == "i3" ]; then
     # start xcompmgr so terminals have true transparency
     xcompmgr -c &
-    # and now put the background image back
-    # a fix for this should be coming in SLiM
-    hsetroot -fill $HOME/.config/wallpapers/In_the_Grass.jpg
+    # add wallpaper image
+    feh --bg-fill $HOME/.config/wallpapers/In_the_Grass.jpg
 
     # start rofi in daemon mode
     rofi &
 
     export GDK_SCALE=2
 else
-    unset GDK_SCALE=
+    unset GDK_SCALE
 fi
