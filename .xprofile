@@ -49,6 +49,9 @@ if [ "$GDMSESSION" == "i3" ]; then
     # add wallpaper image
     feh --bg-fill $HOME/.config/wallpapers/In_the_Grass.jpg
 
+    # start urxvt daemon
+    urxvtd --quiet --opendisplay --fork &
+
     # start rofi in daemon mode
     rofi &
 
