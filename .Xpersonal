@@ -1,3 +1,8 @@
+! https://www.gnome-look.org/p/1172237/
+ Xcursor.size: 64
+! Xcursor.theme: screencast-oxy-red
+
+
 ! urxvt
 
 !! For fake transparency, no longer needed? https://wiki.archlinux.org/index.php/Rxvt-unicode#Transparency_not_working_after_upgrade_to_v9.09
@@ -32,7 +37,7 @@ URxvt.perl-ext-common: default,matcher,keyboard-select,clipboard,resize-font
 URxvt.keysym.Mod4-Escape: perl:keyboard-select:activate
 URxvt.keysym.Mod4-s: perl:keyboard-select:search
 
-!! URL select, but hot key doesn't seem to do anything (replaces matcher)
+!! URL select, but hot key does not seem to do anything (replaces matcher)
 !URxvt.keysym.Mod4-u: perl:url-select:search_next
 ! Selected URLs are automatically copied to the PRIMARY buffer
 !URxvt.url-select.autocopy: true
