@@ -11,6 +11,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Start redshift
+pgrep redshift &> /dev/null || redshift &> /dev/null &
 
 # Set dvorak keyboard layout
 setxkbmap -layout dvorak
